@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Anniversary Aditya & Twanshika 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff5f9e, #ffc371);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-weight: 400;
+      opacity: 0.95;
+      margin-bottom: 30px;
+    }
+
+    .names {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 450px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    }
+
+    .years {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    button {
+      background: white;
+      color: #ff5f9e;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.07);
+    }
+
+    #surprise {
+      display: none;
+      margin-top: 25px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🎵 Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h1>Happy Anniversary 💕</h1>
+    <div class="names">Aditya ❤️ Twanshika</div>
+    <h2>Celebrating your beautiful journey together</h2>
+
+    <div class="card">
+      <div class="years">3 YEARS 🎉</div>
+      <p>
+        Three years of holding hands through everything —  
+        laughs, fights, growth, and memories that matter 💖  
+        <br><br>
+        You didn’t just fall in love…  
+        you stayed. And that’s powerful.
+      </p>
+    </div>
+
+    <button onclick="showMessage()">Tap for a Special Message 💝</button>
+
+    <p id="surprise">
+      Aditya & Twanshika,  
+      may your love keep growing stronger with time ✨  
+      Keep choosing each other.  
+      Keep smiling together.  
+      This is just the beginning 🫶
+    </p>
+
+    <footer>
+      Made with ❤️ by someone who truly wishes you both the best
+    </footer>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("surprise").style.display = "block";
+
+      const music = document.getElementById("bgMusic");
+      music.play();
+    }
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerText = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }, 300);
+  </script>
+
+</body>
+</html>
